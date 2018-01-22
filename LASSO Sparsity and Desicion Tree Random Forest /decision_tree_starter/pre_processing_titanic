@@ -1,0 +1,17 @@
+if __name__ == "__main__":
+	path_train = 'titanic_training.csv'
+	data = genfromtxt(path_train, delimiter=',', dtype=None)
+	features = data[0, 1:]  # features = all columns except survived
+	y = data[1:, 0]  # label = survived
+	class_names = ["Died", "Survived"]
+
+	# y labels 0, 1 
+	y_ind0 = np.where(y[:] == class_names[1])
+	y_ind1 = np.where(y[:] == class_names[1])
+
+	y[y_ind0] = 0
+	y[y_ind1] = 1
+
+
+
+	scipy.io.av=savemat(path_train)

@@ -1,0 +1,1 @@
+Place Train and Val folders in the same directory as your code. 
